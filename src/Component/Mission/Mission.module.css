@@ -1,0 +1,149 @@
+.our_mission {
+    flex-direction: column;
+    gap: 50px;
+}
+.mission_head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.skullImg {
+    background-color: var(--primary-color);
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.skullImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.skullImg::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    animation: Anim_border 2s infinite linear;
+}
+.mission_head h2 {
+    width: 90%;
+    font-size: 6rem;
+    line-height: 6.5rem;
+    font-weight: 500;
+    font-family: var(--Anton-font);
+}
+.mission_infos {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+}
+
+.info_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+.info_box h1 {
+    font-size: 6rem;
+    line-height: 6.5rem;
+    font-weight: 500;
+    font-family: var(--Anton-font);
+}
+.info_box::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 1;
+    transition: var(--transition2);
+}
+.info_box:hover:after {
+    width: 100%;
+}
+.info_box h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--light-text);
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+@keyframes Anim_border {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* MQ SECTION */
+@media (max-width: 1400px) {
+    .mission_head h2 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+}
+@media (max-width: 1200px) {
+    .mission_head h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .mission_infos {
+        width: 85%;
+    }
+}
+@media (max-width: 900px) {
+    .mission_head {
+        flex-direction: row-reverse;
+    }
+    .mission_head h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .mission_infos {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .mission_head {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .mission_head h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+    .our_mission {
+        gap: 20px;
+    }
+}

@@ -1,0 +1,83 @@
+.our_team {
+    flex-direction: column;
+    gap: 50px;
+    background-color: #05080a;
+}
+.TeamSwiper,
+.TeamCard {
+    width: 100%;
+}
+.Team_img {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+.Team_img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: var(--transition2);
+}
+.TeamCard:hover .Team_img::after {
+    opacity: 1;
+}
+.TeamCard:hover .Team_img span {
+    box-shadow: -5px -10px 60px rgb(0, 255, 85);
+}
+.Team_img span {
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    left: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    color: var(--black-color);
+    font-weight: 600;
+    border-radius: 5px;
+    z-index: 5;
+    transition: var(--transition2);
+}
+.team_det {
+    display: flex;
+    flex-direction: column;
+}
+.team_info {
+    margin: 15px 0;
+}
+.team_info h2 {
+    font-size: 1.8rem;
+    font-family: var(--Anton-font);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.team_info h2:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.team_info p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--extra-light-text);
+}
+.social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.social i {
+    font-size: 1.2rem;
+    color: var(--extra-light-text);
+}
+.social i:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.Copyright {
+    padding: 2% 8%;
+    background-color: var(--bg-color);
+}
+.Copyright p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--extra-light-text);
+}
+.Copyright p {
+    color: var(--white-color);
+}
+
+.Copyright p a {
+    color: var(--white-color);
+    transition: var(--transition);
+}
+.Copyright p a:hover {
+    color: var(--primary-color);
+}
+
+/* MQ SECTION */
+@media (max-width: 500px) {
+    .Copyright p {
+        text-align: center;
+    }
+}

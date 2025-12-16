@@ -1,0 +1,43 @@
+.marquee_text {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.marquee_info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marquee_text h1 {
+    font-family: var(--Anton-font);
+    font-size: 7rem;
+    font-weight: 400;
+    margin-right: 3%;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--border-light);
+    transition: var(--transition2);
+}
+.marquee_text h1:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.skullImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 500px) {
+    .marquee_text h1 {
+        font-size: 5rem;
+    }
+    .skullImg {
+        width: 80px;
+        height: 80px;
+    }
+}

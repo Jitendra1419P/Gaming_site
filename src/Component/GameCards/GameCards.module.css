@@ -1,0 +1,39 @@
+.GameSlider {
+    width: 100%;
+}
+.gameCard {
+    width: 100%;
+    position: relative;
+}
+.gameCard button {
+    position: absolute;
+    padding: 15px 25px;
+    top: 50%;
+    left: 50%;
+    background-color: var(--primary-color);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 5;
+    transition: var(--transition2);
+}
+.gameCard button:hover {
+    background-color: var(--white-color);
+}
+.gameCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: var(--transition2);
+}
+.gameCard:hover::after {
+    opacity: 1;
+    cursor: pointer;
+}
+.gameCard:hover button {
+    opacity: 1;
+}

@@ -1,0 +1,87 @@
+.footer {
+    background-color: var(--black-color);
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 3%;
+}
+
+.footer_logo a {
+    font-size: 2.5rem;
+    font-family: var(--Kaushan-font);
+    font-weight: 600;
+    color: var(--white-color);
+}
+.footer_logo a span {
+    font-family: var(--Kaushan-font);
+    color: var(--primary-color);
+}
+.footer_menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_menu li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white-color);
+}
+.footer_menu li:hover a {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.footer_inputs {
+    width: 50%;
+    height: 50px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 2%;
+    position: relative;
+}
+.footer_inputs input {
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: var(--white-color);
+    &::placeholder {
+        color: var(--light-text);
+    }
+}
+.footer_inputs i {
+    position: absolute;
+    top: 30%;
+    right: 3%;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+.footer_social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.footer_social i {
+    font-size: 1.3rem;
+    color: var(--extra-light-text);
+    transition: var(--transition);
+}
+.footer_social i:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* MQ SECTION */
+@media (max-width: 500px) {
+    .footer_menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer_inputs {
+        width: 70%;
+    }
+}
